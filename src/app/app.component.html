@@ -1,3 +1,19 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Mes appareils</h2>
+      <ul class="list-group">
+        <app-appareil [appareilName] = "appareilNameOne" [appareilStatus] = "'online'"></app-appareil>
+        <app-appareil [appareilName] = "appareilNameTwo" [appareilStatus] = "'off line'"></app-appareil>
+        <app-appareil [appareilName] = "appareilNameTree"[appareilStatus] = "'starting ...'"></app-appareil>
+      </ul>
+      <button class="btn btn-success" 
+      [disabled]="!isAuth"
+      (click)="onStartAll()">Start All</button>
+    </div>
+  </div>
+</div> -->
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -7,6 +23,15 @@
         <app-appareil></app-appareil>
         <app-appareil></app-appareil>
       </ul>
+      
+      <!-- ***** Here put button with bootstrap style to perform actions **** -->
+
+      <!-- ***** [Disable] is the bootstrap property. this property is associated with 
+        the Boolean variable Typescript which allows us to activate and deactivate this 
+        button **** -->
+        
+      <button class="btn btn-success" [disabled] = "!isAuth" > Start All</button>
+
     </div>
   </div>
 </div>
